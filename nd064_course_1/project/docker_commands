@@ -1,0 +1,29 @@
+## Docker commands used to build the application
+docker build . -t techtrends
+
+## Docker commands used to run the application
+docker run --name techtrends -d --restart=always -p 7111:3111 techtrends:latest
+
+## Docker commands used to get the application logs
+docker logs techtrends
+
+## Logs from the container running the TechTrends application
+ * Serving Flask app 'app.py' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+192.168.65.1 - - [03/Mar/2024 16:36:25] "GET /metrics HTTP/1.1" 200 -
+192.168.65.1 - - [03/Mar/2024 16:36:31] "GET / HTTP/1.1" 200 -
+192.168.65.1 - - [03/Mar/2024 16:36:31] "GET /static/css/main.css HTTP/1.1" 304 -
+192.168.65.1 - - [03/Mar/2024 16:36:32] "GET /1 HTTP/1.1" 200 -
+192.168.65.1 - - [03/Mar/2024 16:36:32] "GET /static/css/main.css HTTP/1.1" 304 -
+192.168.65.1 - - [03/Mar/2024 16:36:41] "GET / HTTP/1.1" 200 -
+192.168.65.1 - - [03/Mar/2024 16:36:41] "GET /static/css/main.css HTTP/1.1" 304 -
+192.168.65.1 - - [03/Mar/2024 16:36:41] "GET /3 HTTP/1.1" 200 -
+192.168.65.1 - - [03/Mar/2024 16:36:42] "GET /static/css/main.css HTTP/1.1" 304 -
+192.168.65.1 - - [03/Mar/2024 16:36:44] "GET /5 HTTP/1.1" 200 -
+192.168.65.1 - - [03/Mar/2024 16:36:44] "GET /static/css/main.css HTTP/1.1" 304 -
