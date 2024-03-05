@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: techtrends-staging
+  name: techtrends-prod
   namespace: argocd
 spec:
   project: default
@@ -11,11 +11,11 @@ spec:
     path: project/helm
     helm:
       valueFiles:
-        - values-staging.yml
-      releaseName: techtrends-staging
+        - values-prod.yaml
+      releaseName: techtrends-prod
   destination:
     server: https://kubernetes.default.svc
-    namespace: staging
+    namespace: prod
   syncPolicy:
     automated:
       prune: true
