@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: techtrends
-          image: {{.Values.image.repository}}:{{.Values.image.tag}}
+          image: nguyenbachtoan/techtrends:latest
           ports:
             - containerPort: {{.Values.containerPort}}
           resources:
